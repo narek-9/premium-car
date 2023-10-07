@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px 0;
+    background-color: black;
+}
+
+.navigation__content {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__content__title {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation__content__title p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+.navigation__content__title p:last-child {
+    margin-left: 5px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    background-color: #4A90E2;
+}
+
+.navigation__content__pages {
+    flex: 1;
+    display: flex;
+    list-style-type: none;
+}
+
+.navigation__content__pages a {
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.navigation__content__pages a:first-child {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.navigation__content__pages a:last-child {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.navigation__content__search {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.navigation__content__search img {
+    cursor: pointer;
+}
+
+main {
+    width: 75%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.vehicles {
+    display: flex;
+}
+
+.vehicles__leftPart {
+    flex: 1;
+    position: relative;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.vehicles__leftPart div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.vehicles__rightPart {
+    flex: 2;
+    display: grid;
+    grid-template-areas:
+        "card card"
+        "card card";
+    gap: 30px;
+    margin-left: 25px;
+}
+
+.vehicles__card {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.vehicle__card__categoryText {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #4A90E2;
+}
+
+.vehicle__card__dateText {
+    position: absolute;
+    left: 20px;
+    top: 420px;
+    font-size: 14px;
+}
+
+.vehicle__card__titleText {
+    position: absolute;
+    left: 20px;
+    top: 430px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.vehicle__card__dateText:not(.vehicles__leftPart .vehicle__card__dateText) {
+    top: 140px;
+}
+
+.vehicle__card__titleText:not(.vehicles__leftPart .vehicle__card__titleText) {
+    top: 160px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width:1520px) {
+    .vehicle__card__titleText {
+        font-size: 20px;
+    }
+
+    .vehicle__card__dateText {
+        top: 405px;
+    }
+}
+
+@media only screen and (max-width:1350px) {
+    .vehicles {
+        display: block;
+    }
+
+    .vehicles__leftPart {
+        width: 100%;
+        height: 1000px;
+    }
+
+    .vehicles__leftPart div .vehicle__card__categoryText {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        padding: 15px 20px;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: #4A90E2;
+    }
+
+    .vehicles__leftPart div .vehicle__card__dateText {
+        position: absolute;
+        left: 20px;
+        top: 725px;
+        font-size: 40px;
+    }
+
+    .vehicles__leftPart div .vehicle__card__titleText {
+        position: absolute;
+        left: 20px;
+        top: 800px;
+        font-size: 40px;
+    }
+
+    .vehicles__rightPart {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .vehicles__card {
+        width: 100%
+    }
+}
+
+.contentWrapper {
+    display: flex;
+    margin-top: 80px;
+}
+
+.descriptions {
+    flex: 2.5;
+}
+
+.description__card {
+    position: relative;
+    height: 440px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.description__card:not(:first-child) {
+    margin-top: 175px;
+}
+
+.description__card__about {
+    position: absolute;
+    top: 68%;
+    left: 25px;
+    right: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.description__card__about__categoryText {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #4A90E2;
+}
+
+.description__card__about__titleText {
+    margin-left: 30px;
+    font-size: 25px;
+    color: #171717
+}
+
+.description__card__about__dateText {
+    margin-left: 30px;
+    font-size: 14px;
+    font-style: italic;
+    color: #666666
+}
+
+.description__card__about__mainText {
+    width: 88%;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666666
+}
+
+.sliderBlock {
+    margin-top: 200px;
+}
+
+.sliderBlock button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.selectedSlide {
+    color: white;
+    background-color: black;
+}
+
+.grayColor {
+    color: #E5E5E5 !important
+}
+
+.grayBorder {
+    border: 1px solid #E5E5E5 !important;
+}
+
+.initColors {
+    color: black;
+    background-color: white;
+}
+
+
+aside {
+    flex: 1;
+    margin-left: 100px;
+}
+
+.racerImg {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.racerBlock__info__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #171717
+}
+
+.racerBlock__info__profession {
+    font-size: 14px;
+    font-style: italic;
+    color: #999999;
+}
+
+.racerBlock__info__text {
+    font-family: PT Sans;
+    font-size: 15px;
+    line-height: 25px;
+    color: #999999;
+}
+
+.racerBlock__info__continueBtn {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #232323;
+}
+
+.posts {
+    margin-top: 70px;
+}
+
+.posts>h3 {
+    font-size: 18px;
+    color: #171717;
+}
+
+.post {
+    margin-top: 25px;
+}
+
+.post__img {
+    position: relative;
+    height: 195px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.post__img__categoryText {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #4A90E2;
+}
+
+.post__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #171717
+}
+
+.post__date {
+    font-size: 14px;
+    font-style: italic;
+    color: #666666;
+}
+
+.instagram {
+    margin-top: 70px;
+}
+
+.instagram>h3 {
+    font-size: 18px;
+    color: #171717;
+}
+
+.instagram__vehiclesPhotos {
+    display: grid;
+    grid-template-areas:
+        "vehicle vehicle"
+        "vehicle vehicle"
+        "vehicle vehicle"
+    ;
+    gap: 10px;
+}
+
+.instagram__vehiclesPhotos img {
+    width: 100%;
+    height: 130px;
+}
+
+.instagramBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #232323;
+}
+
+.instagramBtn img {
+    margin-right: 10px;
+}
+
+.tags {
+    margin-top: 70px;
+}
+
+.tags>h3 {
+    font-size: 18px;
+    color: #171717;
+}
+
+.tags__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.tags__wrapper button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #171717;
+    background-color: #EBEBEB;
+}
+
+form {
+    margin-top: 70px;
+}
+
+form h3 {
+    font-size: 18px;
+    color: #171717;
+}
+
+form p {
+    font-size: 14px;
+    color: #666666;
+}
+
+form input {
+    width: 89%;
+    margin: 6px 0;
+    padding: 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #AEB3BB;
+}
+
+form input:last-child {
+    width: 99.9%;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #232323;
+}
+
+@media only screen and (max-width:1000px) {
+    .contentWrapper {
+        display: block;
+    }
+
+    aside {
+        margin-top: 70px;
+        margin-left: 0;
+    }
+
+    .racerBlock {
+        display: flex;
+        gap: 15px;
+    }
+
+    .racerImg {
+        flex: 1;
+    }
+
+    .racerBlock__info {
+        flex: 2;
+    }
+
+    .racerBlock__info__name {
+        margin: 0;
+    }
+
+    .racerBlock__info__continueBtn {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .racerBlock__info__text {
+        font-size: 12px;
+    }
+}
+
+.popularPosts {
+    margin-top: 70px;
+}
+
+.popularPosts__wrapper {
+    display: flex;
+    gap: 25px;
+}
+
+.popularPosts h2 {
+    font-size: 30px;
+    color: #171717
+}
+
+.popularPost {
+    position: relative;
+    flex: 1;
+}
+
+.popularPost__img {
+    height: 200px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.popularPost__categoryText {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #4A90E2;
+}
+
+.popularPost__titleText {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #171717;
+}
+
+.popularPost__dateText {
+    margin: 20px 0;
+    font-size: 14px;
+    font-style: italic;
+    color: #666666;
+}
+
+@media only screen and (max-width:1000px) {
+    .posts>h3 {
+        font-size: 30px;
+    }
+
+    .post {
+        margin: 50px 0;
+    }
+
+    .post__img {
+        height: 300px;
+    }
+
+    .post__img__categoryText {
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        padding: 10px 15px;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: #4A90E2;
+    }
+
+    .post__title,
+    .post__date {
+        margin: 0;
+    }
+
+    .post__title {
+        font-size: 26px;
+    }
+
+    .post__date {
+        font-size: 20px;
+    }
+
+    .instagram>h3 {
+        font-size: 30px;
+    }
+
+    .instagram__vehiclesPhotos img {
+        height: 100%;
+    }
+
+    .instagramBtn {
+        width: 30%;
+    }
+
+    .tags>h3 {
+        font-size: 30px;
+    }
+
+    form h3 {
+        font-size: 30px;
+    }
+
+    form p {
+        font-size: 18px;
+    }
+
+    form input:last-child {
+        width: 30%;
+    }
+}
+
+footer {
+    background-color: #171717;
+}
+
+.footerContent {
+    width: 75%;
+    margin: auto;
+    padding: 75px 0;
+    display: flex;
+    gap: 125px;
+}
+
+.footerContent__leftPart {
+    flex: 1.5;
+}
+
+.footerContent__leftPart__title p {
+    font-size: 14px;
+}
+
+.footerContent__leftPart__title span {
+    margin-left: 5px;
+    padding: 5px 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #4A90E2;
+}
+
+.footerContent__leftPart__text {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #CECECE
+}
+
+.footerContent__leftPart__sites {
+    margin-top: 80px;
+}
+
+.footerContent__leftPart__sites h2 {
+    font-size: 20px;
+}
+
+.sites__wrapper {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.site {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #373737;
+}
+
+.footerContent__middlePart {
+    flex: 2;
+}
+
+
+.footerContent__middlePart h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.footerContent__middlePart__card {
+    display: flex;
+    margin: 25px 0;
+    gap: 20px;
+}
+
+.footerContent__middlePart__card__about {
+    flex: 1;
+}
+
+.footerContent__middlePart__card__about__titleText {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footerContent__middlePart__card__about__dateText {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.footerContent__rightPart {
+    flex: 1.5;
+    margin: 0;
+}
+
+.footerContent__rightPart h2 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+
+.footerContent__rightPart input {
+    width: 88%;
+    border: none;
+    background-color: #373737;
+}
+
+.footerContent__rightPart input:last-child {
+    width: 99.9%;
+}
+
+.footerNav {
+    height: 100px;
+    background-color: black;
+}
+
+.footerNav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+}
+
+.footerNav p {
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+.footerNav__navigation {
+    padding: 20px 0;
+}
+
+.footerNav__navigation__lists {
+    display: flex;
+}
+
+.footerNav__navigation__lists a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media only screen and (max-width:1250px) {
+    .footerContent {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footerContent__leftPart__title {
+        font-size: 30px;
+    }
+
+    .footerContent__leftPart__text {
+        font-size: 18px;
+    }
+
+    .footerContent__leftPart__sites h2 {
+        font-size: 26px;
+    }
+
+    .footerContent__middlePart h2 {
+        font-size: 30px;
+    }
+
+    .footerContent__middlePart__card img {
+        flex: 1;
+    }
+
+    .footerContent__middlePart__card__about {
+        flex: 4;
+    }
+
+    .footerContent__middlePart__card__about__titleText {
+        font-size: 26px;
+    }
+
+    .footerContent__middlePart__card__about__dateText {
+        font-size: 20px;
+    }
+
+    .footerContent__rightPart h2 {
+        font-size: 30px;
+    }
+
+    .footerContent__rightPart input:last-child {
+        width: 25%;
+    }
+}
